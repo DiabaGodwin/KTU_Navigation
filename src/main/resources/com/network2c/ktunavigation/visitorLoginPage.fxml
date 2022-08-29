@@ -10,13 +10,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.VisitorLoginPage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.VisitorLoginPage">
    <children>
-      <ImageView fitHeight="909.0" fitWidth="753.0" layoutX="-3.0" layoutY="-13.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../assets/bg.jpg" />
-         </image>
-      </ImageView>
       <TextField fx:id="txtName" layoutX="137.0" layoutY="380.0" prefHeight="40.0" prefWidth="302.0" promptText="Name" style="-fx-background-color: transparent; -fx-border-color: #754913; -fx-border-width: 0px 0px 3px 0px;">
          <font>
             <Font size="21.0" />
@@ -33,11 +28,6 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </TextField>
-      <ImageView fitHeight="176.0" fitWidth="234.0" layoutX="172.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../assets/Icon.png" />
-         </image>
-      </ImageView>
       <Button fx:id="btnContinue" layoutX="232.0" layoutY="589.0" mnemonicParsing="false" onAction="#onClickContinue" prefHeight="48.0" prefWidth="113.0" style="-fx-background-color: transparent; -fx-border-color: #754913; -fx-border-radius: 25px;" text="Continue" textFill="#754913">
          <font>
             <Font size="19.0" />
@@ -57,5 +47,10 @@
          </font>
       </Label>
       <Label fx:id="lblNotice" layoutX="135.0" layoutY="535.0" prefHeight="27.0" prefWidth="302.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="213.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/user.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
