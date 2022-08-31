@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -17,6 +18,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Objects;
+import java.util.Optional;
 
 public class VisitorLoginPage {
 
@@ -43,6 +45,18 @@ public class VisitorLoginPage {
         Connection connection;
         PreparedStatement pst;
 
+        private boolean validation() {
+            if(txtName.getText().isEmpty() | txtPhoneNumber.getText().isEmpty()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText(null);
+                alert.setContentText("All field required");
+                alert.showAndWait();
+
+                return  false;
+            }
+        return true;
+        }
 
 
         public void onClickContinue(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
@@ -50,31 +64,34 @@ public class VisitorLoginPage {
             String name = txtName.getText();
             String phone = txtPhoneNumber.getText();
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/ktu_navigation", "root", "0558894119");
-            pst = connection.prepareStatement("INSERT INTO `ktu_navigation`.`visitors` (`name`, `phone`) VALUES (?, ?)");
+                if(validation()) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    connection = DriverManager.getConnection("jdbc:mysql://localhost/ktu_navigation", "root", "0558894119");
+                    pst = connection.prepareStatement("INSERT INTO `ktu_navigation`.`visitors` (`name`, `phone`) VALUES (?, ?)");
 
-            pst.setString(1, name);
-            pst.setString(2, phone);
+                    pst.setString(1, name);
+                    pst.setString(2, phone);
 
-            int status = pst.executeUpdate();
-
-            if (status == 1) {
-                lblNotice.setText("Record Added");
-                txtName.setText("");
-                txtPhoneNumber.setText("");
-
-            } else {
-                lblNotice.setText("Failed");
-            }
+                    int status = pst.executeUpdate();
 
 
-            Parent root  = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("visitorsDashboard.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+                    if (status == 1) {
+                        lblNotice.setText("Record Added");
+                        txtName.setText("");
+                        txtPhoneNumber.setText("");
 
+                    } else {
+                        lblNotice.setText("Failed");
+
+                    }
+
+
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("visitorsDashboard.fxml")));
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                }
         }
 
 }

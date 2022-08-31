@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.network2c.ktunavigation/com.network2c.ktunavigation.HelloApplication
+                            <mainClass>com.network2c.ktunavigation/com.network2c.ktunavigation.StartApp
                             </mainClass>
                         </configuration>
                     </execution>

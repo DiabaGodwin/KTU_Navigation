@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.StudentDashboard">
+    <children>
+        <AnchorPane prefHeight="800.0" prefWidth="242.0" style="-fx-background-color: #030000; -fx-background-radius: 0 30 0 0;">
+            <children>
+                <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/logo.png" />
+                    </image>
+                </ImageView>
+                <TextField layoutX="2.0" layoutY="77.0" prefHeight="49.0" prefWidth="237.0" promptText="Search Location" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: white; -fx-border-radius: 30 30 30 30;" />
+                <Button layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Administration" textFill="#fcfafa" />
+                <Button layoutY="223.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="School Clinic" textFill="#fcfafa" />
+                <Button layoutY="272.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Radio Station" textFill="#fcfafa" />
+                <Button layoutY="323.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Cafetaria" textFill="#fcfafa" />
+                <Button layoutX="1.0" layoutY="375.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="ADB Bank" textFill="#fcfafa" />
+            <Button layoutX="1.0" layoutY="426.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="CCB Block" textFill="#fcfafa" />
+            <Button layoutX="1.0" layoutY="477.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FBMS Block" textFill="#fcfafa" />
+            <Button layoutX="1.0" layoutY="529.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Computer Science Dpt" textFill="#fcfafa" />
+            <Button layoutY="582.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FOE" textFill="#fcfafa" />
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="3.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/administration.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="7.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/clinic.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="7.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/radio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="8.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/canteen.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="8.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/bank.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="7.0" layoutY="751.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Back" textFill="#fcfafa" />
+            </children></AnchorPane>
+        <ImageView fitHeight="39.0" fitWidth="133.0" layoutX="84.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../assets/ktu_logo.png" />
+            </image>
+        </ImageView>
+    </children>
+
+</AnchorPane>
