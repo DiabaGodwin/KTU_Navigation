@@ -18,19 +18,18 @@ public class DatabaseConnection {
     Connection connection;
     PreparedStatement pst;
 
-    @FXML
-    void onClickContinue(ActionEvent event) throws ClassNotFoundException, SQLException {
+     public  void getConnection( String query) throws ClassNotFoundException, SQLException {
 
 
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://localhost/student", "root", "0558894119");
-        pst = connection.prepareStatement("INSERT INTO `student`.`studentinfo` (`studentID`, `name`, `program`) VALUES (?,?,?)");
-
-        int status = pst.executeUpdate();
-
+         Class.forName("com.mysql.jdbc.Driver");
+         connection = DriverManager.getConnection("jdbc:mysql://localhost/student", "root", "0558894119");
+         pst = connection.prepareStatement(query);
+         pst.executeUpdate();
 
 
-    }
+     }
+
+
 
 
 }

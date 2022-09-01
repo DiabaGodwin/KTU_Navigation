@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.StudentDashboard">
     <children>
+      <AnchorPane layoutX="216.0" layoutY="-3.0" prefHeight="84.0" prefWidth="739.0" style="-fx-background-color: #565656;">
+         <children>
+            <Label layoutX="158.0" layoutY="14.0" prefHeight="64.0" prefWidth="423.0" text="WELCOME TO kOFORIDUA TECHNICAL UNIVERSITY" textFill="#fcfafa">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
         <AnchorPane prefHeight="800.0" prefWidth="242.0" style="-fx-background-color: #030000; -fx-background-radius: 0 30 0 0;">
             <children>
                 <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
@@ -16,15 +27,15 @@
                     </image>
                 </ImageView>
                 <TextField layoutX="2.0" layoutY="77.0" prefHeight="49.0" prefWidth="237.0" promptText="Search Location" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: white; -fx-border-radius: 30 30 30 30;" />
-                <Button layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Administration" textFill="#fcfafa" />
-                <Button layoutY="223.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="School Clinic" textFill="#fcfafa" />
-                <Button layoutY="272.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Radio Station" textFill="#fcfafa" />
-                <Button layoutY="323.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Cafetaria" textFill="#fcfafa" />
-                <Button layoutX="1.0" layoutY="375.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="ADB Bank" textFill="#fcfafa" />
-            <Button layoutX="1.0" layoutY="426.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="CCB Block" textFill="#fcfafa" />
-            <Button layoutX="1.0" layoutY="477.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FBMS Block" textFill="#fcfafa" />
-            <Button layoutX="1.0" layoutY="529.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Computer Science Dpt" textFill="#fcfafa" />
-            <Button layoutY="582.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FOE" textFill="#fcfafa" />
+                <Button fx:id="btnadministration" layoutY="170.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Administration" textFill="#fcfafa" />
+                <Button fx:id="btnClinic" layoutY="223.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="School Clinic" textFill="#fcfafa" />
+                <Button fx:id="btnRadio" layoutY="272.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Radio Station" textFill="#fcfafa" />
+                <Button fx:id="btnCanteen" layoutY="323.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Cafetaria" textFill="#fcfafa" />
+                <Button fx:id="btnBank" layoutX="1.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="ADB Bank" textFill="#fcfafa" />
+            <Button fx:id="btnCCB" layoutX="1.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="CCB Block" textFill="#fcfafa" />
+            <Button fx:id="btnFBMS" layoutX="1.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FBMS Block" textFill="#fcfafa" />
+            <Button fx:id="btnCompssa" layoutX="1.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Computer Science Dpt" textFill="#fcfafa" />
+            <Button fx:id="btnFOE" layoutY="582.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="FOE" textFill="#fcfafa" />
             <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="3.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/administration.png" />
@@ -51,12 +62,100 @@
                </image>
             </ImageView>
             <Button layoutX="7.0" layoutY="751.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="Back" textFill="#fcfafa" />
-            </children></AnchorPane>
+            </children>
+      </AnchorPane>
         <ImageView fitHeight="39.0" fitWidth="133.0" layoutX="84.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../assets/ktu_logo.png" />
             </image>
         </ImageView>
+      <AnchorPane fx:id="clinicPnl" layoutX="242.0" layoutY="85.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="645.0" layoutX="27.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/clinic.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="School Clinic" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="canteenPnl" layoutX="245.0" layoutY="84.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="645.0" layoutX="27.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/CANTEEN.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="School Canteen" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="bankPnl" layoutX="246.0" layoutY="81.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="645.0" layoutX="27.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/adb-bank.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="ADB Bank" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="FOEPnl" layoutX="246.0" layoutY="83.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="552.0" fitWidth="297.0" layoutX="2.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/FOE.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="FOE Block" />
+            <AnchorPane layoutX="260.0" layoutY="53.0" prefHeight="651.0" prefWidth="442.0" style="-fx-background-color: #bebcba; -fx-background-radius: 10 10 10 10;" />
+            <Label layoutX="402.0" layoutY="15.0" prefHeight="27.0" prefWidth="146.0" text="Map View" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="administrationPnl" layoutX="246.0" layoutY="84.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="645.0" layoutX="27.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/ADMIN.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="Administration Block" />
+            <AnchorPane layoutY="358.0" prefHeight="329.0" prefWidth="708.0" style="-fx-background-color: #bebcba; -fx-background-radius: 10px 10px 10px 10px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Map View" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="FBMSPnl" layoutX="244.0" layoutY="84.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="292.0" fitWidth="645.0" layoutX="27.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/FBMS.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="28.0" prefHeight="27.0" prefWidth="199.0" text="FBMS Block" />
+            <AnchorPane layoutX="6.0" layoutY="372.0" prefHeight="329.0" prefWidth="694.0" style="-fx-background-color: #bebcba; -fx-background-radius: 10px 10px 10px 10px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Map View" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="CCBPnl" layoutX="244.0" layoutY="83.0" prefHeight="715.0" prefWidth="708.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="307.0" fitWidth="662.0" layoutX="22.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/CCB.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="19.0" prefHeight="27.0" prefWidth="199.0" text="Central Classroom Block" />
+            <AnchorPane layoutX="7.0" layoutY="375.0" prefHeight="329.0" prefWidth="694.0" style="-fx-background-color: #bebcba; -fx-background-radius: 10px 10px 10px 10px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Map View" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
     </children>
 
 </AnchorPane>

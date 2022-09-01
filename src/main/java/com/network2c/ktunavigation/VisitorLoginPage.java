@@ -74,7 +74,6 @@ public class VisitorLoginPage {
 
                     int status = pst.executeUpdate();
 
-
                     if (status == 1) {
                         lblNotice.setText("Record Added");
                         txtName.setText("");

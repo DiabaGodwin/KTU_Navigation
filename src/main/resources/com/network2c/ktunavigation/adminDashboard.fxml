@@ -5,31 +5,44 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.AdminDashboard">
    <children>
-      <AnchorPane layoutY="74.0" prefHeight="726.0" prefWidth="200.0" style="-fx-background-color: #050301; -fx-background-radius: 0 30 0 0;">
+      <AnchorPane layoutX="-4.0" layoutY="74.0" prefHeight="726.0" prefWidth="200.0" style="-fx-background-color: #050301; -fx-background-radius: 0 30 0 0;">
          <children>
-            <Button fx:id="getCordinate" layoutX="39.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Get Cordinate" textFill="#f8f7f7" />
+            <Button fx:id="getCordinate" layoutX="39.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Get Cordinate" textFill="#f8f7f7" />
             <Button fx:id="back" layoutX="14.0" layoutY="671.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="41.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Go Back" textFill="#f8f7f7" />
-            <Button fx:id="addLocation" layoutX="41.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Add Location" textFill="#f8f7f7" />
-            <Button fx:id="studentTable" layoutX="41.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Student Table" textFill="#f8f7f7" />
-            <Button fx:id="visitorsTable" layoutX="42.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Visitors Table" textFill="#f8f7f7" />
+            <Button fx:id="addLocation" layoutX="41.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Add Location" textFill="#f8f7f7" />
+            <Button fx:id="studentTable" layoutX="42.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Student Table" textFill="#f8f7f7" />
+            <Button fx:id="visitorsTable" layoutX="44.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleClick" style="-fx-background-color: transparent; -fx-border-color: #fbf9f7; -fx-border-radius: 20px;" text="Visitors Table" textFill="#f8f7f7" />
+            <ImageView fitHeight="64.0" fitWidth="132.0" layoutX="34.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/ktu_logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="100.0" layoutY="-1.0" prefHeight="76.0" prefWidth="200.0" style="-fx-border-color: #050301;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="100.0" layoutY="-1.0" prefHeight="76.0" prefWidth="200.0" style="-fx-background-color: #565656;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label layoutX="337.0" layoutY="13.0" prefHeight="51.0" prefWidth="228.0" text="Admin Portal">
+            <Label layoutX="377.0" layoutY="13.0" prefHeight="51.0" prefWidth="228.0" text="Admin Portal" textFill="#f5f3f3">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font>
             </Label>
+            <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="27.0" text="KTU NAAVIGATION APP" textFill="#f2eded" />
          </children>
       </AnchorPane>
-      <StackPane fx:id="contentArea" layoutX="200.0" layoutY="75.0" prefHeight="726.0" prefWidth="749.0" style="-fx-border-color: blue; -fx-border-width: 3px;">
+      <StackPane fx:id="contentArea" layoutX="200.0" layoutY="75.0" prefHeight="726.0" prefWidth="749.0">
          <children>
             <AnchorPane fx:id="getCodinatePage" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
@@ -39,24 +52,52 @@
                      </font>
                   </Label>
                   <TextField layoutX="13.0" layoutY="86.0" prefHeight="39.0" prefWidth="576.0" />
+                  <Button layoutX="465.0" layoutY="224.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 20px;" text="Save" textFill="#170101" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="addLocationPage" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
                   <Label layoutX="42.0" layoutY="64.0" prefHeight="32.0" prefWidth="120.0" text="Name" />
-                  <TextField layoutX="42.0" layoutY="103.0" prefHeight="39.0" prefWidth="482.0" />
-                  <TextField layoutX="42.0" layoutY="203.0" prefHeight="39.0" prefWidth="482.0" />
-                  <Label layoutX="42.0" layoutY="169.0" prefHeight="32.0" prefWidth="120.0" text="Cordinate" />
+                  <TextField fx:id="txtLocName" layoutX="42.0" layoutY="103.0" prefHeight="39.0" prefWidth="482.0" />
+                  <TextField fx:id="txtLat" layoutX="42.0" layoutY="203.0" prefHeight="39.0" prefWidth="482.0" />
+                  <Label layoutX="42.0" layoutY="169.0" prefHeight="32.0" prefWidth="120.0" text="Latitude" />
+                  <Button fx:id="save" layoutX="431.0" layoutY="415.0" mnemonicParsing="false" onAction="#onClickSave" prefHeight="41.0" prefWidth="93.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-radius: 20px;" text="Save" textFill="#1e0202" />
+                  <TextField fx:id="txtLong" layoutX="42.0" layoutY="313.0" prefHeight="39.0" prefWidth="482.0" />
+                  <Label layoutX="42.0" layoutY="271.0" prefHeight="32.0" prefWidth="120.0" text="Longitude" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="visitorsTablePage" layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="745.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView layoutY="107.0" prefHeight="605.0" prefWidth="743.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="ID" />
+                        <TableColumn prefWidth="429.0" text="Name" />
+                        <TableColumn prefWidth="234.0" text="Phone Number" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="235.0" layoutY="49.0" prefHeight="27.0" prefWidth="214.0" text="List Of Visitors">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loadVisitors" layoutX="573.0" layoutY="49.0" mnemonicParsing="false" onAction="#loadVisitorsTable" prefHeight="41.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #0d0000; -fx-border-radius: 20px;" text="Load Table" textFill="#0d0000" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="studentTablePage" prefHeight="720.0" prefWidth="745.0" style="-fx-background-color: white;">
                <children>
-                  <TableView layoutX="-2.0" layoutY="63.0" prefHeight="605.0" prefWidth="743.0">
+                  <TableView fx:id="tblViewStudent" layoutX="-2.0" layoutY="63.0" prefHeight="605.0" prefWidth="743.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="ID" />
-                      <TableColumn prefWidth="217.0" text="Name" />
+                      <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nameCol" prefWidth="429.0" text="Name" />
+                        <TableColumn fx:id="indexCol" prefWidth="234.0" text="Index Number" />
                     </columns>
                   </TableView>
+                  <Label layoutX="244.0" layoutY="14.0" prefHeight="27.0" prefWidth="186.0" text="List Of Student">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loadStudent" layoutX="575.0" layoutY="676.0" mnemonicParsing="false" onAction="#loadStudentTable" prefHeight="41.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #140101; -fx-border-radius: 20px;" text="Load Table" textFill="#140101" />
                </children>
             </AnchorPane>
          </children>

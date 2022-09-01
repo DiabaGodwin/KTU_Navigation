@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,19 +9,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.network2c.ktunavigation.VisitorsDashboard">
    <children>
+      <AnchorPane layoutX="238.0" layoutY="-9.0" prefHeight="99.0" prefWidth="726.0" style="-fx-background-color: #bebcba;">
+         <children>
+            <Label layoutX="153.0" layoutY="50.0" prefHeight="31.0" prefWidth="497.0" style="-fx-font-size: 18px;" text="Welcome To Koforidua Technical University" />
+         </children>
+      </AnchorPane>
       <AnchorPane prefHeight="800.0" prefWidth="274.0" style="-fx-background-color: #030000; -fx-background-radius: 0 30 0 0;">
          <children>
-            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/logo.png" />
                </image>
             </ImageView>
             <TextField layoutX="2.0" layoutY="77.0" prefHeight="49.0" prefWidth="237.0" promptText="Search Location" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 30px 30px 30px 30px;" />
-            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Administration" textFill="#fcfafa" />
-            <Button layoutY="242.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="School Clinic" textFill="#fcfafa" />
+            <Button fx:id="btnadministration" layoutY="170.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Administration" textFill="#fcfafa" />
+            <Button fx:id="btnClinic" layoutY="242.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="School Clinic" textFill="#fcfafa" />
             <Button layoutY="316.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Radio Station" textFill="#fcfafa" />
-            <Button layoutY="388.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Cafetaria" textFill="#fcfafa" />
-            <Button layoutX="1.0" layoutY="461.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="ADB Bank" textFill="#fcfafa" />
+            <Button fx:id="btnCanteen" layoutY="388.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="Cafetaria" textFill="#fcfafa" />
+            <Button fx:id="btnBank" layoutX="1.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 0 20 20 0;" text="ADB Bank" textFill="#fcfafa" />
             <ImageView fitHeight="39.0" fitWidth="31.0" layoutX="8.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../assets/administration.png" />
@@ -47,12 +53,52 @@
                </image>
             </ImageView>
             <Button layoutX="11.0" layoutY="747.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 20 20 20 20;" text="BACK" textFill="#fcfafa" />
+            <ImageView fitHeight="39.0" fitWidth="133.0" layoutX="93.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/ktu_logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="39.0" fitWidth="133.0" layoutX="84.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../assets/ktu_logo.png" />
-         </image>
-      </ImageView>
+      <AnchorPane fx:id="clinicPnl" layoutX="275.0" layoutY="89.0" prefHeight="710.0" prefWidth="691.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="5.0" layoutY="8.0" prefHeight="31.0" prefWidth="169.0" text="SCHOOL CLINIC" />
+            <ImageView fitHeight="317.0" fitWidth="750.0" layoutX="2.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/clinic.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="canteenPnl" layoutX="274.0" layoutY="88.0" prefHeight="710.0" prefWidth="691.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="5.0" layoutY="8.0" prefHeight="31.0" prefWidth="169.0" text="SCHOOL CANTEEN" />
+            <ImageView fitHeight="317.0" fitWidth="750.0" layoutX="2.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/CANTEEN.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="bankPnl" layoutX="275.0" layoutY="89.0" prefHeight="710.0" prefWidth="691.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="5.0" layoutY="8.0" prefHeight="31.0" prefWidth="169.0" text="ADB BANK" />
+            <ImageView fitHeight="333.0" fitWidth="688.0" layoutX="3.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/adb-bank.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="administrationPnl" layoutX="274.0" layoutY="90.0" prefHeight="710.0" prefWidth="691.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="9.0" layoutY="17.0" prefHeight="31.0" prefWidth="169.0" text="ADMINISTRATION BLOCK" />
+            <ImageView fitHeight="335.0" fitWidth="674.0" layoutX="7.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/ADMIN.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

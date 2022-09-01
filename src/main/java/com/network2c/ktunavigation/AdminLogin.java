@@ -60,17 +60,17 @@ public class AdminLogin {
             while (resultSet.next()){
 
                 String dbPassword = resultSet.getString("password");
-
-
                 if (dbPassword.equals(password)){
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setContentText("Login Successful");
                     alert.show();
+
                     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("adminDashboard.fxml")));
                     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
+
                 }
                 else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
