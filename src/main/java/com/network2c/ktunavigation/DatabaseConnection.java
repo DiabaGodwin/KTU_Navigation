@@ -24,7 +24,8 @@ public class DatabaseConnection {
          Class.forName("com.mysql.jdbc.Driver");
          connection = DriverManager.getConnection("jdbc:mysql://localhost/student", "root", "0558894119");
          pst = connection.prepareStatement(query);
-         pst.executeUpdate();
+
+//         return pst.executeUpdate();
 
 
      }

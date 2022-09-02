@@ -69,30 +69,32 @@ public class AdminDashboard implements Initializable {
     private TextField txtLong;
 
 
-    Connection connection;
-    PreparedStatement pst;
 
     public void backToLogin(ActionEvent event) throws IOException {
-        Parent root  = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("adminLogin.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene =new Scene(root);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("adminLogin.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
     public void onClickSave(ActionEvent event) throws ClassNotFoundException, SQLException {
+
+        Connection connection;
+        PreparedStatement pst;
+
         String Locname = txtLocName.getText();
         String lat = txtLat.getText();
-        String longitude =  txtLong.getText();
+        String longitude = txtLong.getText();
 
-        if(txtLocName.getText().isEmpty() | txtLat.getText().isEmpty() | txtLong.getText().isEmpty()){
+        if (txtLocName.getText().isEmpty() | txtLat.getText().isEmpty() | txtLong.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setHeaderText(null);
             alert.setContentText("All field required");
             alert.setTitle("Information Dialog");
             alert.showAndWait();
 
-        }else {
+        } else {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost/ktu_navigation", "root", "0558894119");
@@ -100,7 +102,7 @@ public class AdminDashboard implements Initializable {
 
             pst.setString(1, Locname);
             pst.setString(2, lat);
-            pst.setString(3,longitude);
+            pst.setString(3, longitude);
 
             int status = pst.executeUpdate();
             txtLocName.setText("");
@@ -109,28 +111,60 @@ public class AdminDashboard implements Initializable {
         }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //this section belongs to the tableview for visitors
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        indexCol.setCellValueFactory(new PropertyValueFactory<>("index"));
     }
+
     @FXML
     void handleClick(ActionEvent event) {
-        if (event.getSource() == addLocation){
+        if (event.getSource() == addLocation) {
             addLocationPage.toFront();
-        }
-        else
-        if(event.getSource() == studentTable){
+        } else if (event.getSource() == studentTable) {
             studentTablePage.toFront();
-        }
-        else  if(event.getSource() == getCordinate){
+        } else if (event.getSource() == getCordinate) {
             getCodinatePage.toFront();
 
-        }else if(event.getSource() == visitorsTable){
+        } else if (event.getSource() == visitorsTable) {
             visitorsTablePage.toFront();
         }
     }
-
-
 
 
     @FXML
@@ -146,20 +180,50 @@ public class AdminDashboard implements Initializable {
     private TableColumn<StudentTable, String> indexCol;
 
 
-    public void loadVisitorsTable(ActionEvent event) throws SQLException, ClassNotFoundException{
-        ResultSet resultSet ;
-        DatabaseConnection db = new DatabaseConnection();
-        String query = "SELECT * FROM ktu_navigation.visitors";
-        db.getConnection(query);
-        db.pst.executeUpdate();
-        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
-        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        indexCol.setCellValueFactory(new PropertyValueFactory<>("index"));
+    ObservableList<StudentTable> studentList = FXCollections.observableArrayList();
+    private ResultSet resultSet;
 
-        ObservableList<StudentTable> studentList = FXCollections.observableArrayList();
+
+    public void loadStudentTable(ActionEvent event) throws SQLException, ClassNotFoundException {
+        Connection connection;
+        PreparedStatement pst;
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost/ktu_navigation", "root", "0558894119");
+        resultSet = (ResultSet) connection.createStatement().executeQuery("SELECT * FROM ktu_navigation.student");
+        while (resultSet.next()){
+
+        }
+
+
 
     }
 
-    public void loadStudentTable(ActionEvent event) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void loadVisitorsTable(ActionEvent event) {
+        DatabaseConnection con = new DatabaseConnection();
+
+
     }
+
 }
